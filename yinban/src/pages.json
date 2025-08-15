@@ -1,0 +1,86 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "主页"
+			}
+		},
+		{
+			"path":"pages/login/login",
+			"style": {
+				"navigationBarTitleText": "音伴"
+			}
+		},
+		{
+			"path": "pages/discovery/discovery",
+			"style": {
+				"navigationBarTitleText": "发现"
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/profile/edit",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#8E8E93",
+		"selectedColor": "#667eea",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/game-off.png",
+				"selectedIconPath": "static/game-on.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/discovery/discovery",
+				"iconPath": "static/find-off.png",
+				"selectedIconPath": "static/find-on.png",
+				"text": "发现"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "static/message-off.png",
+				"selectedIconPath": "static/message-on.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"iconPath": "static/myself-off.png",
+				"selectedIconPath": "static/myself-on.png",
+				"text": "我的"
+			}
+		]
+	},
+	"uniIdRouter": {},
+	"easycom": {
+	  "autoscan": true,
+	  "custom": {
+	    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	  }
+	}
+}
