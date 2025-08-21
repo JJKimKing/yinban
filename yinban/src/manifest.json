@@ -56,7 +56,7 @@
         },
         "usingComponents" : true,
         "uniStatistics" : {
-            "enable" : true
+            "enable" : false
         }
     },
     "mp-alipay" : {

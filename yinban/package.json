@@ -52,12 +52,12 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4070520250711001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4070520250711001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4070520250711001",
-    "vue": "^3.5.18",
-    "vue-i18n": "^9.1.9",
+    "crypto-js": "^3.3.0",
     "graphql": "^16.11.0",
     "graphql-request": "^7.2.0",
     "pinia": "^3.0.3",
-    "uview-plus": "^3.4.60"
+    "vue": "^3.5.18",
+    "vue-i18n": "^9.1.9"
   },
   "devDependencies": {
     "@dcloudio/types": "^3.4.8",
@@ -66,6 +66,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-4070520250711001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4070520250711001",
     "@vue/runtime-core": "^3.4.21",
+    "rollup-plugin-javascript-obfuscator": "^1.0.4",
     "vite": "5.2.8"
   }
 }

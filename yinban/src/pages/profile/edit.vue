@@ -33,16 +33,12 @@
 				/>
 			</view>
 			
-			<view class="form-item">
+			<view class="form-item" @click="goToChangePhonePage">
 				<text class="form-label">手机号</text>
-				<input 
-					:value="userInfo.phone" 
-					type="number"
-					placeholder="请输入手机号" 
-					class="form-input"
-					maxlength="11"
-					@input="onPhoneInput"
-				/>
+				<view class="phone-display-container">
+					<text class="phone-text">{{ userInfo.phone || '未设置' }}</text>
+					<text class="modify-link">修改</text>
+				</view>
 			</view>
 		</view>
 
@@ -111,6 +107,10 @@ export default {
 		// 进入编辑状态
 		this.userStore.startEditing()
 	},
+	onShow() {
+		// 重新加载用户数据
+		this.userStore.loadUserData()
+	},
 	onUnload() {
 		// 退出编辑状态
 		this.userStore.stopEditing()
@@ -122,10 +122,6 @@ export default {
 		
 		onSignatureInput(e) {
 			this.userStore.updateSignature(e.detail.value)
-		},
-		
-		onPhoneInput(e) {
-			this.userStore.updatePhone(e.detail.value)
 		},
 		
 		onChooseAvatar(e) {
@@ -153,6 +149,12 @@ export default {
 					uni.navigateBack()
 				}, 1500)
 			}
+		},
+
+		goToChangePhonePage() {
+			uni.navigateTo({
+				url: '/pages/profile/change-phone'
+			});
 		}
 	}
 }
@@ -512,6 +514,25 @@ export default {
 
 .phone-container:active .arrow-icon {
 	opacity: 0.8;
+}
+
+.phone-display-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+.phone-text {
+	font-size: 30rpx;
+	color: #333;
+}
+
+.modify-link {
+	font-size: 28rpx;
+	color: #007aff;
+	margin-left: 20rpx;
+	cursor: pointer;
 }
 
 .form-textarea:focus {
