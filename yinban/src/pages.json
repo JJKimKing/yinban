@@ -55,6 +55,18 @@
         "navigationBarTitleText": "修改手机号",
         "navigationBarBackgroundColor": "#ffffff"
       }
+    },
+    {
+      "path": "pages/companion/following",
+      "style": {
+        "navigationBarTitleText": "我的关注"
+      }
+    },
+    {
+      "path": "pages/companion/favorites",
+      "style": {
+        "navigationBarTitleText": "我的粉丝"
+      }
     }
   ],
 	"globalStyle": {

@@ -54,7 +54,7 @@
 			<view class="action-item" @click="navigateTo('/pages/companion/following')">
 				<image src="@/static/star.png" class="action-icon"></image>
 				<text class="action-text">关注</text>
-				<text class="action-badge" v-if="companionCount.following > 0">{{ companionCount.following }}</text>
+				<text class="action-badge">{{ companionCount.following }}</text>
 			</view>
 			<view class="action-item" @click="navigateTo('/pages/companion/blacklist')">
 				<image src="@/static/gaming.png" class="action-icon"></image>
@@ -148,10 +148,8 @@ export default {
 	},
 	methods: {
 		navigateTo(url) {
-			// TODO: 实际跳转页面，这里先提示
-			uni.showToast({
-				title: `跳转到: ${url}`,
-				icon: 'none'
+			uni.navigateTo({
+				url: url
 			})
 		},
 		async editProfile() {
@@ -171,7 +169,7 @@ export default {
 		this.loadUserData()
 	},
 	onShow() {
-		
+		this.loadUserData()
 	},
 	onUnload() {
 		uni.$off('userInfoUpdated')

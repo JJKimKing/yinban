@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js';
 
-const DEV_BASE_URL = 'http://192.168.1.5:8080';
-const PRO_BASE_URL = 'http://192.168.1.5:8080';
+const DEV_BASE_URL = 'http://192.168.1.8:8080';
+const PRO_BASE_URL = 'http://192.168.1.8:8080';
 
 const BASE_URL = process.env.NODE_ENV === 'development' ? DEV_BASE_URL : PRO_BASE_URL;
 
@@ -122,7 +122,6 @@ const request = async (options) => {
 						// 如果请求是加密的，并且响应中有 result 字段，则尝试解密
                         if (options.encrypt && data.result) {
                             data.result = decryptData(data.result);
-							console.log("解密数据:"+data.result)
                         }
 						resolve(data);
 					} else if (data.code === 401) {
